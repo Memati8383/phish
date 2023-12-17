@@ -1,11 +1,8 @@
 import requests, os, json, sys, time
 from colorama import Fore, Style
+from modul import modul_indir
 
-# Gerekli modülleri indir
-os.system("clear")
-os.system("chmod +x main.py")
-os.system("pip install requests")
-os.system("clear")
+modul_indir()
 
 # İkinci animasyon
 def loading_animation():
