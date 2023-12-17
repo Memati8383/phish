@@ -1,17 +1,17 @@
 import requests, os, json, sys, time
 
 os.system("clear")
-os.system("chmod +x phish.py")
+os.system("chmod +x main.py")
 os.system("pip install requests")
 os.system("clear")
 
 def loading_animation():
     symbols = ["-", "|", "/", "\\"]
-    for i in range(1, 16):
+    for i in range(1, 21):  # Adjusted the range for a smoother animation
         sys.stdout.write('\r')
         sys.stdout.write('-' * i + symbols[i % len(symbols)])
         sys.stdout.flush()
-        time.sleep(0.2)
+        time.sleep(0.1)  # Adjusted the sleep time for a faster animation
 
 print("""
             ███████╗███████╗██████╗ ██╗████████╗
