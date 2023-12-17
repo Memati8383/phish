@@ -2,6 +2,8 @@ import requests, os, json, sys, time
 from colorama import Fore, Style
 from modul import modul_indir
 from ikinci_animasyon import loading_animation
+from ilk_animasyon import renkli_animasyon
+from temizle_yazdir import renkli_animasyon
 
 # Modülleri indir
 modul_indir()
@@ -10,19 +12,10 @@ modul_indir()
 loading_animation()
 
 # İlk animasyon
-def renkli_animasyon():
-    symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
-    
-    for i in range(1, 41):
-        sys.stdout.write('\r')
-        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(40)]))
-        sys.stdout.flush()
-        time.sleep(0.2)
+renkli_animasyon()
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
-def temizle_ve_yazdir(text):
-    print('\033[K' + text, end='')
-    sys.stdout.flush()
+renkli_animasyon()
 
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
