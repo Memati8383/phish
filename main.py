@@ -3,7 +3,7 @@ from colorama import Fore, Style
 from modul import modul_indir
 from ikinci_animasyon import loading_animation
 from ilk_animasyon import renkli_animasyon
-from temizle_yazdir import renkli_animasyon
+from temizle_yazdir import temizle_ve_yazdir
 
 # Modülleri indir
 modul_indir()
@@ -15,7 +15,7 @@ loading_animation()
 renkli_animasyon()
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
-renkli_animasyon()
+temizle_ve_yazdir()
 
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
