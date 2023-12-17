@@ -1,4 +1,5 @@
 import requests, os, json, sys, time
+from colorama import Fore, Style
 
 os.system("clear")
 os.system("chmod +x main.py")
@@ -12,16 +13,33 @@ def loading_animation():
         sys.stdout.write('-' * i + symbols[i % len(symbols)])
         sys.stdout.flush()
         time.sleep(0.2)  # Adjusted the sleep time for a faster animation
-loading_animation()
-print("""
+
+def renkli_animasyon():
+    symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
+    
+    for i in range(1, 21):
+        sys.stdout.write('\r')
+        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(20)]))
+        sys.stdout.flush()
+        time.sleep(0.1)
+
+text = """
             ███████╗███████╗██████╗ ██╗████████╗
             ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
             █████╗  █████╗  ██████╔╝██║   ██║   
             ██╔══╝  ██╔══╝  ██╔══██╗██║   ██║   
             ██║     ███████╗██║  ██║██║   ██║   
             ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
-                                                
-            """)
+"""
+
+renkli_text = (
+    Fore.RED + text.replace("█", Fore.YELLOW + "█" + Fore.RED) +
+    Style.RESET_ALL
+)
+
+loading_animation()
+print(renkli_text)
+renkli_animasyon()
 
 print("""
 1--->Instagram
