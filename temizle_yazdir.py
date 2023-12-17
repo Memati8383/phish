@@ -1,5 +1,13 @@
 import sys
-from ferit import text
+
+text = """
+            ███████╗███████╗██████╗ ██╗████████╗
+            ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
+            █████╗  █████╗  ██████╔╝██║   ██║   
+            ██╔══╝  ██╔══╝  ██╔══██╗██║   ██║   
+            ██║     ███████╗██║  ██║██║   ██║   
+            ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
+"""
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
 def temizle_ve_yazdir(text):
