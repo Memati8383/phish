@@ -1,3 +1,5 @@
+import sys, time
+
 # İkinci animasyon
 def loading_animation():
     symbols = ["-", "|", "/", "\\"]
