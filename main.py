@@ -17,11 +17,11 @@ def loading_animation():
 def renkli_animasyon():
     symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
     
-    for i in range(1, 21):
+    for i in range(1, 41):
         sys.stdout.write('\r')
-        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(20)]))
+        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(40)]))
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(1)
 
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
@@ -37,7 +37,6 @@ renkli_text = (
     Style.RESET_ALL
 )
 
-loading_animation()
 print(renkli_text)
 renkli_animasyon()
 
