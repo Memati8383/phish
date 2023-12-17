@@ -7,12 +7,12 @@ os.system("clear")
 
 def loading_animation():
     symbols = ["-", "|", "/", "\\"]
-    for i in range(1, 21):  # Adjusted the range for a smoother animation
+    for i in range(1, 16):  # Adjusted the range for a smoother animation
         sys.stdout.write('\r')
         sys.stdout.write('-' * i + symbols[i % len(symbols)])
         sys.stdout.flush()
-        time.sleep(0.1)  # Adjusted the sleep time for a faster animation
-
+        time.sleep(0.2)  # Adjusted the sleep time for a faster animation
+loading_animation()
 print("""
             ███████╗███████╗██████╗ ██╗████████╗
             ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
@@ -55,6 +55,7 @@ else:
         response_sayfa = requests.get(api_url_sayfa, params=params_sayfa)
 
         if response_sayfa.status_code == 200:
+	    os.system("clear")
             print("""
             ███████╗███████╗██████╗ ██╗████████╗
             ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
