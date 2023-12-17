@@ -1,3 +1,6 @@
+import sys, time
+from colorama import Fore, Style
+
 # İlk animasyon
 def renkli_animasyon():
     symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
