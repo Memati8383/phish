@@ -17,9 +17,9 @@ def loading_animation():
 def renkli_animasyon():
     symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
     
-    for i in range(1, 41):
+    for i in range(1, 25):
         sys.stdout.write('\r')
-        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(40)]))
+        sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(24)]))
         sys.stdout.flush()
         time.sleep(0.2)
 
