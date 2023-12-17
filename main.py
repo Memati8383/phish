@@ -73,6 +73,8 @@ else:
            
         # Mail gönderme apisi kullanılmazsa devam et
         ozelurl = input(f"{Fore.GREEN}Özel Url (instagram-com gibi)--->{Style.RESET_ALL}")
+        
+        os.system("clear")
         print("\033[32m|")
         loading_animation() # İlk animasyon
 
