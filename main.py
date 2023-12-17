@@ -23,6 +23,10 @@ def renkli_animasyon():
         sys.stdout.flush()
         time.sleep(0.2)
 
+def temizle_ve_yazdir(text):
+    print('\033[K' + text, end='')  # Metni temizle ve yazdır
+    sys.stdout.flush()
+
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
             ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
@@ -39,6 +43,7 @@ renkli_text = (
 
 print(renkli_text)
 renkli_animasyon()
+temizle_ve_yazdir(renkli_text)
 
 print("""
 1--->Instagram
