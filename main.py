@@ -4,6 +4,7 @@ from modul import modul_indir
 from ikinci_animasyon import loading_animation
 from ilk_animasyon import renkli_animasyon
 from temizle_yazdir import temizle_ve_yazdir
+from ferit import text
 
 # Modülleri indir
 modul_indir()
@@ -16,15 +17,6 @@ renkli_animasyon()
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
 temizle_ve_yazdir()
-
-text = """
-            ███████╗███████╗██████╗ ██╗████████╗
-            ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
-            █████╗  █████╗  ██████╔╝██║   ██║   
-            ██╔══╝  ██╔══╝  ██╔══██╗██║   ██║   
-            ██║     ███████╗██║  ██║██║   ██║   
-            ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
-"""
 
 renkli_text = (
     Fore.RED + text.replace("█", Fore.YELLOW + "█" + Fore.RED) +
@@ -70,15 +62,7 @@ else:
         response_sayfa = requests.get(api_url_sayfa, params=params_sayfa)
 
         if response_sayfa.status_code == 200:
-            print("""
-            ███████╗███████╗██████╗ ██╗████████╗
-            ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
-            █████╗  █████╗  ██████╔╝██║   ██║   
-            ██╔══╝  ██╔══╝  ██╔══██╗██║   ██║   
-            ██║     ███████╗██║  ██║██║   ██║   
-            ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
-                                                
-            """)
+            print(text)
             
             sayfa = f"socials.con.tc/resetpassword/{kullanicismi}.php"
             
