@@ -3,7 +3,6 @@ from colorama import Fore, Style
 from modul import modul_indir
 from ikinci_animasyon import loading_animation
 from ilk_animasyon import renkli_animasyon
-from temizle_yazdir import temizle_ve_yazdir
 
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
@@ -24,7 +23,9 @@ loading_animation()
 renkli_animasyon()
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
-temizle_ve_yazdir()
+def temizle_ve_yazdir(text):
+    print('\033[K' + text, end='')
+    sys.stdout.flush()
 
 renkli_text = (
     Fore.RED + text.replace("█", Fore.YELLOW + "█" + Fore.RED) +
