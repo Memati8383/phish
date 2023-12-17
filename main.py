@@ -50,29 +50,29 @@ renkli_animasyon() # Animasyonlu yazıyı yap ve bitir
 os.system("clear") # Animasyonlu yazıyı bitirdikten sonra ekranı temizle
 temizle_ve_yazdir(renkli_text) # Ekrana sadece ferit yazdırma
 
-print("""
-1--->Instagram
-0--->Exit
+print(f"""
+{Fore.GREEN}1--->Instagram{Style.RESET_ALL}
+{Fore.RED}0--->Exit{Style.RESET_ALL}
 """)
-print("MORE is COMING SOON...")
+print(f"{Fore.MAGENTA}MORE is COMING SOON...{Style.RESET_ALL}")
 
-seçim = input("Seçiminiz--->")
+seçim = input(f"{Fore.CYAN}Seçiminiz--->{Style.RESET_ALL}")
 
 if seçim == "0":
-    print("Çıkış Yapıldı")
+    print(f"{Fore.RED}Çıkış Yapıldı{Style.RESET_ALL}")
 else:
     if seçim == "1":
         # Kullanıcıdan mail al
-        mail = input("Mail Adresiniz--->")
+        mail = input(f"{Fore.GREEN}Mail Adresiniz--->{Style.RESET_ALL}")
 
         # Kullanıcıdan Hedef Kullanıcının mail adresini al
-        to = input("Hedef Kullanıcının Maili (boş bırakmak için enter'a basın)--->")
-        kullanicismi = input("Hedef Kullanıcının İnstagram İsmi--->")
+        to = input(f"{Fore.GREEN}Hedef Kullanıcının Maili (boş bırakmak için enter'a basın)--->{Style.RESET_ALL}")
+        kullanicismi = input(f"{Fore.GREEN}Hedef Kullanıcının İnstagram İsmi--->{Style.RESET_ALL}")
 
         # Eğer to boş değilse mail gönderme apisi kullan
            
         # Mail gönderme apisi kullanılmazsa devam et
-        ozelurl = input("Özel Url (instagram-com gibi)--->")
+        ozelurl = input(f"{Fore.GREEN}Özel Url (instagram-com gibi)--->{Style.RESET_ALL}")
         print("\033[32m|")
         loading_animation() # İlk animasyon
 
@@ -134,13 +134,13 @@ Bu mesaj {to} adresine {kullanicismi} için gönderilmiştir. Bu sizin hesabın�
             print(f"Hata! HTTP durumu: {response_sayfa.status_code}")
             print("API yanıtı:", response_sayfa.text)
     else:
-        print("Geçersiz seçim. Lütfen 1'i seçin.")
+        print(f"{Fore.RED}Geçersiz seçim. Lütfen 1'i seçin.{Style.RESET_ALL}")
 
     print("Programı sonlandırmak için 'e' tuşuna basın.")
     kapat_secimi = input("Seçiminiz--->")
 
     if kapat_secimi.lower() == "e":
-        print("Program kapatılıyor...")
+        print(f"{Fore.RED}Program kapatılıyor...{Style.RESET_ALL}")
         sys.exit(0)
     else:
         print("Program devam ediyor.")
