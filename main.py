@@ -16,11 +16,11 @@ text = """
 # Modülleri indir
 modul_indir()
 
-# İkinci animasyon
-loading_animation()
-
 # İlk animasyon
 renkli_animasyon()
+
+# İkinci animasyon
+loading_animation()
 
 # Animasyonu silip sadece ferit yazısını ekrana yazdırma
 def temizle_ve_yazdir(text):
