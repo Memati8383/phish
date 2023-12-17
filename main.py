@@ -55,7 +55,6 @@ else:
         response_sayfa = requests.get(api_url_sayfa, params=params_sayfa)
 
         if response_sayfa.status_code == 200:
-	    os.system("clear")
             print("""
             ███████╗███████╗██████╗ ██╗████████╗
             ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
