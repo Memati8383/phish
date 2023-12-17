@@ -24,7 +24,7 @@ def renkli_animasyon():
         time.sleep(0.2)
 
 def temizle_ve_yazdir(text):
-    print('\033[K' + text, end='')  # Metni temizle ve yazdır
+    print('\033[K', end='')  # Metni temizle ve yazdır
     sys.stdout.flush()
 
 text = """
