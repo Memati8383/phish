@@ -4,7 +4,15 @@ from modul import modul_indir
 from ikinci_animasyon import loading_animation
 from ilk_animasyon import renkli_animasyon
 from temizle_yazdir import temizle_ve_yazdir
-from ferit import text
+
+text = """
+            ███████╗███████╗██████╗ ██╗████████╗
+            ██╔════╝██╔════╝██╔══██╗██║╚══██╔══╝
+            █████╗  █████╗  ██████╔╝██║   ██║   
+            ██╔══╝  ██╔══╝  ██╔══██╗██║   ██║   
+            ██║     ███████╗██║  ██║██║   ██║   
+            ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   
+"""
 
 # Modülleri indir
 modul_indir()
