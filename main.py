@@ -21,7 +21,7 @@ def renkli_animasyon():
         sys.stdout.write('\r')
         sys.stdout.write(''.join([symbols[(i + j) % len(symbols)] for j in range(40)]))
         sys.stdout.flush()
-        time.sleep(1)
+        time.sleep(0.2)
 
 text = """
             ███████╗███████╗██████╗ ██╗████████╗
