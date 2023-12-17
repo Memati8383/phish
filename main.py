@@ -1,17 +1,13 @@
 import requests, os, json, sys, time
 from colorama import Fore, Style
 from modul import modul_indir
+from ikinci_animasyon import loading_animation
 
+# Modülleri indir
 modul_indir()
 
 # İkinci animasyon
-def loading_animation():
-    symbols = ["-", "|", "/", "\\"]
-    for i in range(1, 16):
-        sys.stdout.write('\r')
-        sys.stdout.write('-' * i + symbols[i % len(symbols)])
-        sys.stdout.flush()
-        time.sleep(0.2)
+loading_animation()
 
 # İlk animasyon
 def renkli_animasyon():
